@@ -1,3 +1,4 @@
+[app]
 [report]
-omit =
-    */__init__.py
+omit = ireporter/*
+

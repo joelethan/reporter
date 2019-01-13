@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.6.7"
+  - "3.6"
 # command to install dependencies
 install:
   - pip install -r requirements.txt
@@ -9,4 +9,3 @@ script:
   - pytest app/tests --cov=app/views
 after_success:
   - coveralls
-

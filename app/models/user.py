@@ -2,8 +2,8 @@ import uuid
 from datetime import datetime
 
 class User:
-  def __init__(self, username, first_name, last_name, other_names, email, phone_number, password, is_admin):
-    self.id = str(uuid.uuid4())
+  def __init__(self, id, username, first_name, last_name, other_names, email, phone_number, password, is_admin):
+    self.id = id
     self.username = username
     self.email = email
     self.password = password

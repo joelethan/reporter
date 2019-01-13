@@ -18,6 +18,7 @@ def home():
 def register():
     data = request.get_json(force=True)
     
+    id = len(user_list) + 1
     username = data.get('username', None)
     email = data.get('email', None)
     password = data.get('password', None)
@@ -40,7 +41,7 @@ def register():
           "error": "Account already exits"
         }), 400
 
-    user = User(username, first_name, last_name, other_names, email, phone_number, password, is_admin)
+    user = User(id ,username, first_name, last_name, other_names, email, phone_number, password, is_admin)
     user_list.append(user)
 
     response = {
